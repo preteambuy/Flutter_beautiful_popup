@@ -1,8 +1,8 @@
+// ignore_for_file: unused_local_variable, deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import '../main.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'Common.dart';
 
 /// ![](https://raw.githubusercontent.com/jaweii/Flutter_beautiful_popup/master/img/bg/red_packet.png)
 class TemplateRedPacket extends BeautifulPopupTemplate {

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'Common.dart';
 import '../main.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
