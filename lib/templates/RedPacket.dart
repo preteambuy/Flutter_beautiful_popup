@@ -87,33 +87,35 @@ class TemplateRedPacket extends BeautifulPopupTemplate {
         ),
       );
       final minHeight = 40.0 - (outline ? 2 : 0);
-      return RaisedButton(
-        color: Colors.transparent,
+
+      ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent,
         elevation: elevation,
-        highlightElevation: 0,
-        splashColor: Colors.transparent,
-        child: Ink(
-          decoration: decoration,
-          child: Container(
-            constraints: BoxConstraints(
-              minWidth: 100,
-              minHeight: minHeight,
-            ),
-            alignment: Alignment.center,
-            child: Text(
-              label,
-              style: TextStyle(
-                color: Colors.white.withOpacity(0.95),
-                fontWeight: FontWeight.bold,
-              ).merge(labelStyle),
-            ),
-          ),
-        ),
         padding: EdgeInsets.all(0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
         ),
-        onPressed: onPressed,
+      );
+      return ElevatedButton(
+          style: buttonStyle,
+          onPressed: onPressed,
+          child: Ink(
+            decoration: decoration,
+            child: Container(
+              constraints: BoxConstraints(
+                minWidth: 100,
+                minHeight: minHeight,
+              ),
+              alignment: Alignment.center,
+              child: Text(
+                label,
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.95),
+                  fontWeight: FontWeight.bold,
+                ).merge(labelStyle),
+              ),
+            ),
+          )
       );
     };
   }
